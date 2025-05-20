@@ -122,6 +122,7 @@ class BigNumberCard extends HTMLElement {
       root.querySelector("ha-card").style.setProperty('--bignumber-color', `${this._getColor(entityState, config)}`);
       this._entityState = entityState
       let value = (config.round == null ? entityState : parseFloat(entityState).toFixed(config.round)) 
+      value.toLocaleString();
       if (config.hideunit==true) 
         { root.getElementById("value").textContent = `${value}`; }
       else 
